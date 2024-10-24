@@ -30,9 +30,9 @@ description: Triton Inference Server
 name: triton-inference-server
 version: 1.0.0
 dependencies:
-  - name: traefik
-    version: "~10.6.2"
-    repository: "https://helm.traefik.io/traefik"
+  - name: gloo-gateway
+    version: "~1.18.0-beta1"
+    repository: "https://storage.googleapis.com/solo-public-helm"
     tags:
       - loadBalancing
   - name: prometheus-adapter

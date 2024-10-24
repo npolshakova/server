@@ -39,18 +39,22 @@ image:
 serverArgs:
   - '--model-repository=/models'
 
-traefik:
-  ports:
-    triton-http:
-      port: 18000
-      exposedPort: 8000
-      expose: true
-      protocol: TCP
-    triton-grpc:
-      port: 18001
-      exposedPort: 8001
-      expose: true
-      protocol: TCP
+# gloo:
+#   discovery:
+#     enabled: false
+#   gatewayProxies:
+#     gatewayProxy:
+#       disabled: true
+#   kubeGateway:
+#     enabled: true
+#   gloo:
+#     disableLeaderElection: true
+# gloo-fed:
+#   enabled: false
+#   glooFedApiserver:
+#     enable: false
+# settings:
+#   disableKubernetesDestinations: true
 
 autoscaling:
   minReplicas: 1
